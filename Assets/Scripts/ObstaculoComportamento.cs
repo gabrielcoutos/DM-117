@@ -45,7 +45,9 @@ public class ObstaculoComportamento : MonoBehaviour
         if (collision.gameObject.GetComponent<NaveControlador>())
         {
             Destroy(collision.gameObject);
-            Invoke("ResetaJogo", tempoEspera);
+
+            var gameOverMenu = GetGameOverMenu();
+            gameOverMenu.SetActive(true);
         }
     }
 
@@ -67,4 +69,10 @@ public class ObstaculoComportamento : MonoBehaviour
 
         Destroy(this.gameObject);
     }
+
+    private GameObject GetGameOverMenu()
+    {
+        return GameObject.Find("Canvas").transform.Find("GameOver").gameObject;
+    }
+
 }
