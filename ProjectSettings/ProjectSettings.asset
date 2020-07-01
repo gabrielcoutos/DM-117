@@ -650,10 +650,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 526d9c9e-e295-423c-9339-c07f2284c481
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: DM117-Trabalho
+  organizationId: adilsondjr
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

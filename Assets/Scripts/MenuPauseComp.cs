@@ -14,7 +14,6 @@ public class MenuPauseComp : MonoBehaviour
     /// </summary>
     public void Restart()
     {
-        print("teste");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -40,9 +39,11 @@ public class MenuPauseComp : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+#if !UNITY_ADS
         Pause(false);
+#endif
     }
 
     // Update is called once per frame

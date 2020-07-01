@@ -11,5 +11,22 @@ public class MenuPrincipal : MonoBehaviour
     public void CarregaScene(string nomeScene)
     {
         SceneManager.LoadScene(nomeScene);
+
+#if UNITY_ADS
+        if (UnityAdControl.showAds) {
+            UnityAdControl.ShowAd();
+        }
+#endif
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        UnityAdControl.InitializeAds();
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
